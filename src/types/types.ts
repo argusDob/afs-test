@@ -43,7 +43,6 @@ export type TableData = {
 
 export type Column = {
   field: keyof TableData;
-
   label: string;
 };
 
@@ -54,7 +53,6 @@ export type Message = {
 
 export type ValidationReport = {
   isValid: boolean | null;
-
   name: string | null | number;
   value: string | number | undefined | null;
 };
@@ -62,7 +60,7 @@ export type ValidationReport = {
 export type InputFields = {
   label: string | null;
   name: string | null;
-  min?: string | null;
   placeholder?: string | null;
   type: string | null;
+  min?: string | null;
 };
