@@ -27,7 +27,7 @@ spaces and grids but unfortunately my time was a bit limited.
 
 Also the modal should be accessible in the future according to WGAG framework.
 
-Currently the entire ```buefy``` library imported and we use only the table. This has a big impact to the performanance
+Currently the entire ```buefy``` library imported and we use only the table. This have a big impact to the performanance
 and incrase the ```First Contentful Paint``` and the ```Largest Contentful Paint```. Treeshaking should be applied before the app ship to production.
 
 
