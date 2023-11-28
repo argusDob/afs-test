@@ -12,7 +12,7 @@ All the tasks are implemented.
 
 ### Update transfers button
 The button was not working because we tried to update a reactive object without using the ```
-this.$set ```. In Vue 2 if a reactive prop thit is not primitive  
+this.$set ```. In Vue 2 if a reactive prop is not primitive  
 the this.set method should be called and the updated object should be passed as a parameter.It's important to use this.$set when modifying properties within Vue components to maintain reactivity, especially when working with nested objects or arrays.
 
 For more explanation please check this: https://v2.vuejs.org/v2/guide/reactivity.html
