@@ -8,6 +8,15 @@ This is a Vue 2 project with TS using these libraries for component setup:
 
 ## Assignments
 
+All the tasks are implemented.
+
+### Update transfers button
+The button was not working because we tried to update a ractive object without using the ```
+this.$set method ```
+
+
+
+
 ### table row
 On the "Home" page is a table, add a row to this table that displays the totals of the other rows.
 
