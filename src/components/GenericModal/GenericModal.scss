@@ -1,0 +1,54 @@
+@import '../../assets/scss/media-queries.scss';
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .modal {
+        background-color: white;
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+        max-width: 500px;
+        width: 100%;
+        max-width: 40%;
+        display: inline-block;
+        height: 500px;
+        position: fixed;
+        left: 25%;
+        top: 25%;
+        max-height: 400px;
+        overflow-y: auto;
+
+        @include tablet {
+            left: 30%;
+            max-width: 50%;
+        }
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        &__close-button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        &__body {
+            font-size: 16px;
+        }
+    }
+}

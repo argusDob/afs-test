@@ -1,0 +1,117 @@
+@import "../../assets/scss/media-queries.scss";
+
+@mixin flex-column-space-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    background: #efebe9;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 8px;
+
+    &__indicator {
+        height: auto;
+        width: 10px;
+        background: red;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        padding: 24px;
+
+        @include tablet {
+            @include flex-column-space-between;
+        }
+
+        &--first-block {
+            @include flex-column-space-between;
+
+            @include tablet {
+                border-bottom: 1px solid rgb(189, 195, 199);
+                border-right: none;
+            }
+
+            justify-content: space-between;
+            border-right: 1px solid rgb(189, 195, 199);
+            flex-basis: 20%;
+
+            &__price {
+                background: -webkit-linear-gradient(grey, black);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 24px;
+            }
+
+            &__state {
+                @include flex-column-space-between;
+                font-size: 14px;
+
+                &--day {
+                    color: grey;
+                }
+
+                &--time {
+                    color: grey;
+                    margin-top: 4px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &--second-block {
+            @include flex-column-space-between;
+
+            @include tablet {
+                margin: 0;
+            }
+
+            flex-grow: 1;
+            margin-left: 24px;
+            justify-content: space-between;
+
+            &__fullname {
+                @include tablet {
+                    text-align: center;
+                    margin-bottom: 8px;
+                    margin-top: 8px;
+
+                }
+
+                text-align: right;
+                font-weight: 900;
+            }
+
+            &---infos {
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+
+                @include tablet {
+                    @include flex-column-space-between;
+                }
+
+                &__details {
+                    @include tablet {
+                        margin-bottom: 8px;
+
+                    }
+
+                    @include flex-column-space-between;
+                    color: grey;
+                }
+
+                &__details> :nth-child(2) {
+                    margin-top: 4px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

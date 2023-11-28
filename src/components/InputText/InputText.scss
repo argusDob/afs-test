@@ -1,0 +1,28 @@
+.input-text {
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid #0088cc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  input::placeholder {
+    color: #aaa;
+  }
+
+  input:focus {
+    border-color: #005577;
+  }
+
+  label {
+    color: #333;
+    transition: all 0.3s;
+    pointer-events: none;
+    float: left;
+
+  }
+}

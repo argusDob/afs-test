@@ -1,0 +1,45 @@
+@import '../../assets/scss/media-queries.scss';
+
+.security-class {
+  &__form {
+    display: grid;
+    gap: 10px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+
+    >* {
+      &:nth-child(1) {
+        grid-area: first;
+      }
+
+      &:nth-child(2) {
+        grid-area: second;
+      }
+
+      &:nth-child(3) {
+        grid-area: third;
+      }
+
+      &:nth-child(4) {
+        grid-area: fourth;
+      }
+
+      &:nth-child(5) {
+        grid-area: fifth;
+      }
+
+      &:nth-child(6) {
+        grid-area: sixth;
+      }
+    }
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "first second"
+    "third fourth"
+    "fifth ."
+    "sixth sixth";
+  }
+}

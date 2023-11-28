@@ -1,0 +1,23 @@
+.primary-button {
+  padding: 10px 20px;
+  background-color: #0088cc;
+  /* Flat blue color, matching the input border */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #005577;
+    /* A darker shade of blue for hover */
+  }
+
+  &:active {
+    background-color: #005577;
+    /* A darker shade of blue for hover */
+  }
+}
