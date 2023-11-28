@@ -12,10 +12,18 @@ All the tasks are implemented.
 
 ### Update transfers button
 The button was not working because we tried to update a ractive object without using the ```
-this.$set method ```
+this.$set ```. In Vue 2 if an ractive prop which is not primitive the 
+the this.set method should be called and the updated object should be passed as a parameter.It's important to use this.$set when modifying properties within Vue components to maintain reactivity, especially when working with nested objects or arrays.
 
+For more explanation please check this: https://v2.vuejs.org/v2/guide/reactivity.html
 
+### Description
 
+The cards are implemented according to the design but the colors the spaces and the fonts are different.
+In real life I am getting Figma mocks to translate them to px. At least the grid is exactly the same. 
+
+If I had the time I would refactor the css and I would make a kind of design system for colors , typography,
+spaces and grids but unfortunately my time was a bit limited.
 
 ### table row
 On the "Home" page is a table, add a row to this table that displays the totals of the other rows.
