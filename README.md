@@ -11,8 +11,8 @@ This is a Vue 2 project with TS using these libraries for component setup:
 All the tasks are implemented.
 
 ### Update transfers button
-The button was not working because we tried to update a ractive object without using the ```
-this.$set ```. In Vue 2 if an ractive prop which is not primitive the 
+The button was not working because we tried to update a reactive object without using the ```
+this.$set ```. In Vue 2 if a reactive prop thit is not primitive  
 the this.set method should be called and the updated object should be passed as a parameter.It's important to use this.$set when modifying properties within Vue components to maintain reactivity, especially when working with nested objects or arrays.
 
 For more explanation please check this: https://v2.vuejs.org/v2/guide/reactivity.html
@@ -24,6 +24,12 @@ In real life I am getting Figma mocks to translate them to px. At least the grid
 
 If I had the time I would refactor the css and I would make a kind of design system for colors , typography,
 spaces and grids but unfortunately my time was a bit limited.
+
+Also the modal should be accessible in the future according to WGAG framework.
+
+Currently the entire ```buefy``` library imported and we use only the table. This has a big impact to the performanance
+and incrase the ```First Contentful Paint``` and the ```Largest Contentful Paint```. Treeshaking should be applied before the app ship to production.
+
 
 ### table row
 On the "Home" page is a table, add a row to this table that displays the totals of the other rows.
