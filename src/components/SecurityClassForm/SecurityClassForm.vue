@@ -35,7 +35,7 @@ export default class SecurityClassForm extends Vue {
   messageBlock = {};
 
   @Getter("notifications/getMessage") message!: Message;
-  @Action("form/updateTable") updateTable!: (newTableRow: TableData) => void;
+  @Action("dynamicTable/updateTable") updateTable!: (newTableRow: TableData) => void;
   @Action("notifications/updateMessage") updateMessage!: (
     newTableRow: Message
   ) => void;

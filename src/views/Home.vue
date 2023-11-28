@@ -37,8 +37,8 @@ export default class Home extends Vue {
   @Action("notifications/updateMessage") updateMessage!: (
     message: Message
   ) => void;
-  @Action("form/updateTable") updateTable!: (message: null) => void;
-  @Getter("form/getTableRow") newTableRow!: TableData;
+  @Action("dynamicTable/updateTable") updateTable!: (message: null) => void;
+  @Getter("dynamicTable/getTableRow") newTableRow!: TableData;
 
   tableData: TableData[] = [];
   loading = false;

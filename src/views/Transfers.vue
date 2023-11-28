@@ -9,7 +9,7 @@
         </button>
       </div>
       <transition name="transition">
-        <section>
+        <section v-if="!loading">
           <div v-if="searchedTransfers.length">
             <transfer-row
               :key="transfer.transactionIdentifier"
@@ -42,6 +42,7 @@ import convertDateFormat from "@/utils/dateUtils";
 export default class Transfers extends Vue {
   searchTerms = "";
   transfers: Transaction[] = [];
+  loading = true;
 
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   get searchedTransfers() {
@@ -93,6 +94,7 @@ export default class Transfers extends Vue {
         }
       });
       this.transfers = transfers;
+      this.loading = false;
     } catch (error) {
       console.log(error, "Unexpexted error.");
     }
